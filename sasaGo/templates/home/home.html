@@ -141,30 +141,32 @@
                     </div>
                 </div>
                 <div class="row justify-content-center items">
+                    {% for vehicle in vehicles %}
                     <div class="col-12 col-md-6 col-lg-4 item">
                         <div class="card">
-                             <i class="icon fas fa-motorcycle"></i>
-                            <h4>Motoboy</h4>
-                            <p>Functional motoboy for delivery of documents and small objects.</p>
+                             <i class="icon fas fa-{{vehicle.get_icon_label_display}}"></i>
+                            <h4>{{vehicle.get_vehicle_type_display}}</h4>
+                            <p>{{vehicle.description}}</p>
                             <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4 item">
-                        <div class="card">
-                            <i class="icon fas fa-shuttle-van"></i>
-                            <h4>Mini Truck</h4>
-                            <p>Suitable for medium sized loads. <br> </p>
-                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 item">
-                        <div class="card">
-                          <i class="icon fas fa-truck-moving"></i>
-                            <h4>Truck</h4>
-                            <p>Suitable for Large sized loads. <br> </p>
-                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+                    {% endfor%}
+<!--                    <div class="col-12 col-md-6 col-lg-4 item">-->
+<!--                        <div class="card">-->
+<!--                            <i class="icon fas fa-shuttle-van"></i>-->
+<!--                            <h4>Mini Truck</h4>-->
+<!--                            <p>Suitable for medium sized loads. <br> </p>-->
+<!--                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-12 col-md-6 col-lg-4 item">-->
+<!--                        <div class="card">-->
+<!--                          <i class="icon fas fa-truck-moving"></i>-->
+<!--                            <h4>Truck</h4>-->
+<!--                            <p>Suitable for Large sized loads. <br> </p>-->
+<!--                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
         </section>

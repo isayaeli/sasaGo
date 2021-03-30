@@ -1,5 +1,10 @@
 from django.shortcuts import render
+from .models import Vehicle
 
-# Create your views here.
+
 def home(request):
-	return render(request, 'home/home.html')
+	queryset = Vehicle.objects.filter()
+	context = {
+		'vehicles': queryset
+	}
+	return render(request, 'home/home.html', context=context)
