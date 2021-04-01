@@ -147,7 +147,7 @@
                              <i class="icon fas fa-{{vehicle.get_icon_label_display}}"></i>
                             <h4>{{vehicle.get_vehicle_type_display}}</h4>
                             <p>{{vehicle.description}}</p>
-                            <a href="#"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
+                            <a href="{% url 'vehicle_details' vehicle.id %}"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                     {% endfor%}
